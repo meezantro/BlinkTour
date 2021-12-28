@@ -1,0 +1,124 @@
+body {
+    padding-top: 120px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+label{
+    font-size: 16px !important;
+    color: #151515 !important;
+    min-width: 150px;
+    margin-bottom: 20px;
+}
+
+form input{
+    width: 300px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 5px 15px;
+}
+#nonstyle-label{
+    width: 50px !important;
+}
+#id_gender{
+    width: 50px;
+    list-style: none;
+}
+#id_gender_0, #id_gender_1 {
+    width: 20px;
+}
+
+#id_messageForm{
+    border: 1px solid #000;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 16px;
+}
+#id_themes{
+    min-width: 300px;
+    border: 1px solid #000;
+    font-size: 16px;
+    padding: 5px 15px;
+    border-radius: 15px;
+}
+.container-pool h2{
+    font-size: 32px;
+}
+.pool-finish li{
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: underline;
+    color: darkblue;
+}
+
+.pool-finish li span{
+    display: inline-block;
+    font-weight: 400;
+    margin-right: 15px;
+    color: #000;
+}
+
+.navbar{
+    height: 100px !important;
+}
+.navbar-inner {
+    margin-top: 20px;
+    height: 100% !important;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-collapse{
+    margin-top: 20px;
+    height: 100%;
+    display: flex;
+}
+
+.navbar-collapse ul li a{
+    color: #fff !important;
+}
+
+.navbar-collapse a {
+    color: #fff;
+    margin-top: -15px;
+}

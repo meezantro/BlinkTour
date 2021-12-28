@@ -1,0 +1,12 @@
+{% extends "app/layout.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+
+<a href ="https://travel.yandex.ru/avia/" target="_blank"> <img src="{% static 'app/content/yandex.jpg' %}" alt="Logo 1" width="300" height="200"/></a>
+<a href ="https://www.aviasales.ru/" target="_blank"> <img src="{% static 'app/content/aviasales.jpg' %}" alt="Logo 1" width="300" height="200"/></a>
+<a href ="https://жд-билеты.сайт/?utm_source=yandex&utm_medium=cpc&utm_campaign=lp_rzhd_bilety_official_rf%7C44030973&utm_content=phrase_id%7C18537041685%7Cgid%7C3855899791%7Caid%7C7631359334&utm_term=---autotargeting&type=search&source=none&added=no&block=premium&pos=1&device=desktop&retargeting=&region=region_name%7CПсков%7Cregion_id%7C25&yclid=7735779190374718114#/" target="_blank"> <img src="{% static 'app/content/rjd.jpg' %}" alt="Logo 1" width="300" height="200"/></a>
+
+{% endblock %}

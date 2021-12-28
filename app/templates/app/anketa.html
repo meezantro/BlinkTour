@@ -1,0 +1,55 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% load staticfiles %}
+
+{% if form != None %}
+<div class="container-pool">
+<br /><h1>Оставить отзыв</h1><br />
+<div>
+    <form class="form-content" method="post">
+        {% csrf_token %}
+        <label for="{{ form.name.id_for_label }}">{{ form.name.label }}:</label>
+        {{ form.name }}<br />
+        <label for="{{ form.last_name.id_for_label }}">{{ form.last_name.label }}:</label>
+        {{ form.last_name }}<br />
+        <label for="{{ form.email.id_for_label }}">{{ form.email.label }}:</label>
+        {{ form.email }}<br />
+        <label id="nonstyle-label" for="{{ form.gender.id_for_label }}">{{ form.gender.label }}:</label>
+        {{ form.gender }}<br />
+        <label for="{{ form.themes.id_for_label }}">{{ form.themes.label }}:</label>
+        {{ form.themes }}<br />
+        <label for="{{ form.titleForm.id_for_label }}">{{ form.titleForm.label }}:</label>
+        {{ form.titleForm }}<br />
+        <label for="{{ form.messageForm.id_for_label }}">{{ form.messageForm.label }}:</label>
+        {{ form.messageForm }}<br />
+        <label for="{{ form.notice.id_for_label }}">{{ form.notice.label }}:</label>
+        {{ form.notice }}<br />
+        <input type="submit" value="Отправить" />
+    </form>
+</div>
+</div>
+{% else %}
+<div class="container-pool">
+<br /><h2>Спасибо!</h2>
+<h3>Вы оставили следующий отзыв: </h3>
+<ul class="pool-finish">
+    <li><span>Имя: </span>{{ data.name }}</li>
+    <li><span>Фамилия: </span>{{ data.last_name }}</li>
+    <li><span>Почта: </span>{{ data.email }}</li>
+    <li><span>Пол: </span>{{ data.gender }}</li>
+    <li><span>Тема: </span>{{ data.themes }}</li>
+    <li><span>Заголовок: </span>{{ data.titleForm }}</li>
+    <li><span>Сообщение: </span>{{ data.messageForm }}</li>
+    <li><span>Присылать ли Вам новости нашего сайта? </span>{{ data.notice }}</li>
+</ul>
+</div>
+{% endif %}
+<script>
+    let inputBgFocus = () => $('#id_name').css('background-color', 'red');
+    let inputBgBlur = () => $('#id_name').css('background-color', '#fff');
+    $('#id_name').focus(inputBgFocus);
+    $('#id_name').blur(inputBgBlur);
+</script>
+{% endblock %}
